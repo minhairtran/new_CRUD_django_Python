@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Danh sach hoc sinh:
+
+{% for instance in object_list %}
+<ul>
+    <li>
+        {{ instance.id }} -
+        <a href='{{ instance.get_absolute_url }}'>
+            {{ instance.identity_number }} -
+            {{ instance.name }} -
+            {{ instance.age }} -
+            {{ instance.hometown }} - 
+            {{ instance.CPA }}
+        </a>
+    </li>
+</ul>
+{% endfor %}
+
+{% endblock content%}
